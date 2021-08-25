@@ -1,0 +1,53 @@
+﻿@model IEnumerable<NutriPaulo.Models.Alimentos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CafeDaManha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Almoço)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lanche)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CafeDaNoite)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CafeDaManha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Almoço)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lanche)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CafeDaNoite)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AlimentosId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AlimentosId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AlimentosId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
