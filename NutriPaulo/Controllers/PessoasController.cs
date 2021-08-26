@@ -58,6 +58,31 @@ namespace NutriPaulo.Controllers
         {
             if (ModelState.IsValid)
             {
+                
+                _context.Add(pessoas);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(pessoas);
+        }
+
+
+        // GET: Pessoas/Create
+        public IActionResult Biotipo()
+        {
+            return View();
+        }
+
+        // POST: Pessoas/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Biotipo([Bind("PessoasId,Nome,SobreNome,CPF,RG,Email")] Pessoas pessoas)
+        {
+            if (ModelState.IsValid)
+            {
+
                 _context.Add(pessoas);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

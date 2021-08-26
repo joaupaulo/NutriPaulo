@@ -15,43 +15,46 @@
     <div class="conteudo">
 
         <div class="Titulo">
-
-            <h1 class="display-5">Vamos realizar o seu cadastro !</h1>
-            <h2>Insira seus dados</h2>
-            <p><em> A qualidade da alimentação é tão importante quanto a quantidade..</em></p>
+            <h1 class="display-5">
+               Paulo Santos
+            </h1>
+            <p><em> Você já se perguntou por que algumas pessoas comem, comem e comem e nunca engordam? Ou porque outras não podem nem olhar para um docinho que já ganham cinco quilos? Se pensou genética ou metabolismo, você está certo. Na verdade, a combinação dos dois é chamada de biotipo corporal.</em></p>
+            <p><em> O biotipo corporal corresponde ao modelo de corpo que pode ser influenciado pela constituição óssea, metabolismo, massa muscular e quantidade de gordura..</em></p>
         </div>
 
         <div class="form-group  ">
-            @Html.LabelFor(model => model.Nome, new { @class = "col-sm-2 col-form-label" })
-            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @placeholder = "Digite seu nome", @style = "width:400px;" })
+            @Html.LabelFor(model => model.CaracteristicasFisicas.Biotipo, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.CaracteristicasFisicas.Biotipo, new { @class = "form-control", @placeholder = "Digite seu nome", @style = "width:400px;" })
             <div class="alert-danger">
-                @Html.ValidationMessageFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.CaracteristicasFisicas.Biotipo)
             </div>
         </div>
 
         <div class="form-group  ">
-            @Html.LabelFor(model => model.SobreNome, new { @class = "col-sm-2 col-form-label" })
-            @Html.TextBoxFor(model => model.SobreNome, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            @Html.LabelFor(model => model.CaracteristicasFisicas.Idade, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.CaracteristicasFisicas.Idade, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
             <div class="alert-danger">
-                @Html.ValidationMessageFor(model => model.SobreNome)
+                @Html.ValidationMessageFor(model => model.CaracteristicasFisicas.Idade)
             </div>
         </div>
 
         <div class="form-group  ">
-            @Html.LabelFor(model => model.Email, new { @class = "col-sm-2 col-form-label" })
-            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            @Html.LabelFor(model => model.CaracteristicasFisicas.Altura, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.CaracteristicasFisicas.Altura, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
             <div class="alert-danger">
-                @Html.ValidationMessageFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.CaracteristicasFisicas.Altura)
             </div>
         </div>
 
         <div class="form-group  ">
-            @Html.LabelFor(model => model.CPF, new { @class = "col-sm-2 col-form-label" })
-            @Html.TextBoxFor(model => model.CPF, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            @Html.LabelFor(model => model.CaracteristicasFisicas.Peso, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.CaracteristicasFisicas.Peso, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
             <div class="alert-danger">
-                @Html.ValidationMessageFor(model => model.CPF)
+                @Html.ValidationMessageFor(model => model.CaracteristicasFisicas.Peso)
             </div>
         </div>
+
+
 
         <div class="form-group  ">
             @Html.LabelFor(model => model.RG, new { @class = "col-sm-2 col-form-label" })
@@ -63,7 +66,7 @@
 
 
         <div class="conteudoInferior">
-            <button class="meubtn"> <a href='@Url.Action("Biotipo", "Pessoas")' class="btn btn-primary"> Faça uma avaliação ! </a> </button>
+            <button class="meubtn"> <a href='@Url.Action("Biotipo", "Pessoas")' class="btn btn-primary"> Conte nos um pouco sobre a sua rotina . </a> </button>
         </div>
 
 

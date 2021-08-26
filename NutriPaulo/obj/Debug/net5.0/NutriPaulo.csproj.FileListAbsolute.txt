@@ -186,3 +186,4 @@ C:\Users\Paulo\source\repos\NutriPaulo\NutriPaulo\obj\Debug\net5.0\Razor\Views\R
 C:\Users\Paulo\source\repos\NutriPaulo\NutriPaulo\obj\Debug\net5.0\Razor\Views\RelatorioPrincipals\Edit.cshtml.g.cs
 C:\Users\Paulo\source\repos\NutriPaulo\NutriPaulo\obj\Debug\net5.0\Razor\Views\RelatorioPrincipals\Index.cshtml.g.cs
 C:\Users\Paulo\source\repos\NutriPaulo\NutriPaulo\obj\Debug\net5.0\Razor\Views\RelatorioPrincipals\Home.cshtml.g.cs
+C:\Users\Paulo\source\repos\NutriPaulo\NutriPaulo\obj\Debug\net5.0\Razor\Views\Pessoas\Biotipo.cshtml.g.cs

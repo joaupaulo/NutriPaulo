@@ -13,7 +13,7 @@ namespace NutriPaulo.Models
         public int Altura { get; set; }
         public int Peso { get; set; }
         public string Biotipo { get; set; }
-
+        public int Idade { get; set; }
         public int PessoasId { get; set; }
         public Pessoas PessoaId { get; set; }
     }
