@@ -26,6 +26,13 @@ namespace NutriPaulo.Controllers
             return View(await nutriContexto.ToListAsync());
         }
 
+
+        public async Task<IActionResult> Home()
+        {
+            
+            return View();
+        }
+
         // GET: RelatorioPrincipals/Details/5
         public async Task<IActionResult> Details(int? id)
         {

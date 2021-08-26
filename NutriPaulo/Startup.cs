@@ -55,7 +55,7 @@ namespace NutriPaulo
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=RelatorioPrincipals}/{action=Index}/{id?}");
+                    pattern: "{controller=RelatorioPrincipals}/{action=Home}/{id?}");
             });
         }
     }

@@ -1,53 +1,133 @@
 ﻿@model NutriPaulo.Models.Pessoas
 
-@{
-    ViewData["Title"] = "Create";
-}
 
-<h1>Create</h1>
 
-<h4>Pessoas</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NutriPaulo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="conteudo">
+
+        <div class="Titulo">
+
+            <h1 class="display-5">Vamos realizar o seu cadastro !</h1>
+            <h2>Insira seus dados</h2>
+            <p><em> A qualidade da alimentação é tão importante quanto a quantidade..</em></p>
+        </div>
+
+        <div class="form-group  ">
+            @Html.LabelFor(model => model.Nome, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @placeholder = "Digite seu nome", @style = "width:400px;" })
+            <div class="alert-danger">
+                @Html.ValidationMessageFor(model => model.Nome)
             </div>
-            <div class="form-group">
-                <label asp-for="SobreNome" class="control-label"></label>
-                <input asp-for="SobreNome" class="form-control" />
-                <span asp-validation-for="SobreNome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group  ">
+            @Html.LabelFor(model => model.SobreNome, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.SobreNome, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            <div class="alert-danger">
+                @Html.ValidationMessageFor(model => model.SobreNome)
             </div>
-            <div class="form-group">
-                <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
-                <span asp-validation-for="CPF" class="text-danger"></span>
+        </div>
+
+        <div class="form-group  ">
+            @Html.LabelFor(model => model.Email, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            <div class="alert-danger">
+                @Html.ValidationMessageFor(model => model.Email)
             </div>
-            <div class="form-group">
-                <label asp-for="RG" class="control-label"></label>
-                <input asp-for="RG" class="form-control" />
-                <span asp-validation-for="RG" class="text-danger"></span>
+        </div>
+
+        <div class="form-group  ">
+            @Html.LabelFor(model => model.CPF, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.CPF, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            <div class="alert-danger">
+                @Html.ValidationMessageFor(model => model.CPF)
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group  ">
+            @Html.LabelFor(model => model.RG, new { @class = "col-sm-2 col-form-label" })
+            @Html.TextBoxFor(model => model.RG, new { @class = "form-control", @placeholder = "Digite seu sobrenome", @style = "width:400px;" })
+            <div class="alert-danger">
+                @Html.ValidationMessageFor(model => model.RG)
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
+
+
     </div>
-</div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <button class="meubtn">  <a asp-action="Index">Back to List</a> </button>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #3f51b5;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #f9fbe7;
+    }
+
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+
+
+    .Titulo {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    .meubtn {
+        padding: 10px 10px;
+        border-radius: 10px;
+        border: none;
+        font-family: sans-serif;
+        margin: 0 auto;
+    }
+    }
+</style>
+
+
