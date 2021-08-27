@@ -9,6 +9,15 @@
             <th>
                 @Html.DisplayName("Paciente")
             </th>
+            <th>
+                @Html.DisplayName("CPF")
+            </th>
+            <th>
+                @Html.DisplayName("RG")
+            </th>
+            <th>
+                @Html.DisplayName("Email")
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -16,7 +25,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Pessoas.PessoasId)
+                @Html.DisplayFor(modelItem => item.Pessoas.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pessoas.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pessoas.RG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pessoas.Email)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.RelatorioPrincipalId">Edit</a> |
@@ -38,6 +56,10 @@
         box-sizing: border-box;
     }
 
+    table{
+        width:400px;
+        
+    }
     body {
         font-family: sans-serif;
         background-color: #3f51b5;
