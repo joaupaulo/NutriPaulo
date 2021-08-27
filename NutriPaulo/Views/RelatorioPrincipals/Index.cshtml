@@ -1,50 +1,69 @@
 ﻿@model IEnumerable<NutriPaulo.Models.RelatorioPrincipal>
 
-<h1 style="text-align:center">Relatório De Pacientes</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
 
 
-<table class="table table-hover table-dark" style="margin:0 auto">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayName("Paciente")
-            </th>
-            <th>
-                @Html.DisplayName("CPF")
-            </th>
-            <th>
-                @Html.DisplayName("RG")
-            </th>
-            <th>
-                @Html.DisplayName("Email")
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pessoas.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pessoas.CPF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pessoas.RG)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pessoas.Email)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.RelatorioPrincipalId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.RelatorioPrincipalId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.RelatorioPrincipalId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <h1 style="text-align:center">Relatório De Pacientes</h1>
+
+
+    <table class="table table-hover table-dark mt-4 text-center " style="margin:0 auto">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayName("Paciente")
+                </th>
+                <th>
+                    @Html.DisplayName("CPF")
+                </th>
+                <th>
+                    @Html.DisplayName("RG")
+                </th>
+                <th>
+                    @Html.DisplayName("Email")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pessoas.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pessoas.CPF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pessoas.RG)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pessoas.Email)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.RelatorioPrincipalId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.RelatorioPrincipalId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.RelatorioPrincipalId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
 
 
 <style>
@@ -56,10 +75,10 @@
         box-sizing: border-box;
     }
 
-    table{
-        width:400px;
-        
+    table {
+        width: 400px;
     }
+
     body {
         font-family: sans-serif;
         background-color: #3f51b5;

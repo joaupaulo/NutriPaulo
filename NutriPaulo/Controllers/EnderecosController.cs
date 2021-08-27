@@ -65,7 +65,7 @@ namespace NutriPaulo.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PessoasId"] = new SelectList(_context.Pessoas, "PessoasId", "PessoasId", enderecos.PessoasId);
+
             return View(enderecos);
         }
 
@@ -82,7 +82,7 @@ namespace NutriPaulo.Controllers
             {
                 return NotFound();
             }
-            ViewData["PessoasId"] = new SelectList(_context.Pessoas, "PessoasId", "PessoasId", enderecos.PessoasId);
+         /*   ViewData["PessoasId"] = new SelectList(_context.Pessoas, "PessoasId", "PessoasId", enderecos.PessoasId)*/;
             return View(enderecos);
         }
 
@@ -118,7 +118,7 @@ namespace NutriPaulo.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PessoasId"] = new SelectList(_context.Pessoas, "PessoasId", "PessoasId", enderecos.PessoasId);
+            //ViewData["PessoasId"] = new SelectList(_context.Pessoas, "PessoasId", "PessoasId", enderecos.PessoasId);
             return View(enderecos);
         }
 
