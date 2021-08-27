@@ -1,19 +1,13 @@
 ﻿@model IEnumerable<NutriPaulo.Models.RelatorioPrincipal>
 
-@{
-    ViewData["Title"] = "Index";
-}
+<h1 style="text-align:center">Relatório De Pacientes</h1>
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-hover table-dark" style="margin:0 auto">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Pessoas)
+                @Html.DisplayName("Paciente")
             </th>
             <th></th>
         </tr>
@@ -33,3 +27,20 @@
 }
     </tbody>
 </table>
+
+
+<style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+        background-color: #3f51b5;
+        color: #f9fbe7;
+    }
+</style>
